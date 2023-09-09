@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Dimensions
 } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
 import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
@@ -35,8 +36,11 @@ export const Welcome = () => {
         style={styles.button}
         activeOpacity={0.7}
       >
-        <Text style={styles.buttonText}>
-          >
+        <Text>
+          <Feather
+            name="chevron-right"
+            style={styles.buttonIcon}
+          />
         </Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -74,8 +78,8 @@ const styles = StyleSheet.create({
     image: {
       height: Dimensions.get('window').width * 0.7
     },
-    buttonText: {
+    buttonIcon: {
+      fontSize: 32,
       color: colors.white,
-      fontSize: 24
     }
 });
