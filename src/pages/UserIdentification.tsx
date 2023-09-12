@@ -8,6 +8,7 @@ import {
 } from  'react-native';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
+import { Button } from '../components/Button';
 
 export function UserIdentification(){
   return (
@@ -23,7 +24,11 @@ export function UserIdentification(){
           </Text>
           <TextInput
               style={styles.input}
+              placeholder="Digite um nome"
           />
+          <View style={styles.footer}>
+            <Button />
+          </View>
         </View>
       </View>
     </SafeAreaView>
@@ -67,5 +72,10 @@ const styles = StyleSheet.create({
     color: colors.heading,
     fontFamily: fonts.heading,
     marginTop: 20
+  },
+  footer: {
+    width: '100%',
+    marginTop: 40,
+    paddingHorizontal: 20,
   }
 })
