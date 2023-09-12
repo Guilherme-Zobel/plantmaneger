@@ -4,7 +4,9 @@ import {
   StyleSheet,
   View,
   Text,
-  TextInput
+  TextInput,
+  KeyboardAvoidingView,
+  Platform
 } from  'react-native';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
@@ -13,24 +15,29 @@ import { Button } from '../components/Button';
 export function UserIdentification(){
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.form}>
-          <Text style={styles.emoji}>
-            😄
-          </Text>
-          <Text style={styles.title}>
-            Como podemos {'\n'}
-            chamar você?
-          </Text>
-          <TextInput
-              style={styles.input}
-              placeholder="Digite um nome"
-          />
-          <View style={styles.footer}>
-            <Button />
+      <KeyboardAvoidingView
+          style={styles.container}
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      >
+        <View style={styles.content}>
+          <View style={styles.form}>
+            <Text style={styles.emoji}>
+              😄
+            </Text>
+            <Text style={styles.title}>
+              Como podemos {'\n'}
+              chamar você?
+            </Text>
+            <TextInput
+                style={styles.input}
+                placeholder="Digite um nome"
+            />
+            <View style={styles.footer}>
+              <Button />
+            </View>
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   )
 }
