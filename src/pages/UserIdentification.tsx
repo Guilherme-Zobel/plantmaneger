@@ -21,13 +21,15 @@ export function UserIdentification(){
       >
         <View style={styles.content}>
           <View style={styles.form}>
-            <Text style={styles.emoji}>
-              😄
-            </Text>
-            <Text style={styles.title}>
-              Como podemos {'\n'}
-              chamar você?
-            </Text>
+            <View style={styles.header}>
+              <Text style={styles.emoji}>
+                😄
+              </Text>
+              <Text style={styles.title}>
+                Como podemos {'\n'}
+                chamar você?
+              </Text>
+            </View>
             <TextInput
                 style={styles.input}
                 placeholder="Digite um nome"
@@ -57,6 +59,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 54,
+    alignItems: 'center',
+  },
+  header: {
     alignItems: 'center',
   },
   emoji: {
