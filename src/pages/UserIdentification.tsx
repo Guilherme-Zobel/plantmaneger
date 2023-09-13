@@ -19,11 +19,10 @@ export function UserIdentification(){
 
   function handleInputBlur() {
     setIsFocused(false);
-    setIsFilled(!!name)
   }
 
   function handleInputFocus() {
-    setIsFocused(false);
+    setIsFocused(true);
   }
 
   function handleInputChange(value: string) {
